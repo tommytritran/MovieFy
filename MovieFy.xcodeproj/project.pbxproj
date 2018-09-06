@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0A236D3F2140B3F800D5E14C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A236D3E2140B3F800D5E14C /* AppDelegate.swift */; };
-		0A236D412140B3F900D5E14C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A236D402140B3F900D5E14C /* ViewController.swift */; };
 		0A236D442140B3F900D5E14C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A236D422140B3F900D5E14C /* Main.storyboard */; };
 		0A236D462140B3FA00D5E14C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A236D452140B3FA00D5E14C /* Assets.xcassets */; };
 		0A236D492140B3FA00D5E14C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A236D472140B3FA00D5E14C /* LaunchScreen.storyboard */; };
 		0A236D542140B3FA00D5E14C /* MovieFyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A236D532140B3FA00D5E14C /* MovieFyTests.swift */; };
 		0A236D5F2140B3FA00D5E14C /* MovieFyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A236D5E2140B3FA00D5E14C /* MovieFyUITests.swift */; };
+		0A236D722140BE2700D5E14C /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A236D712140BE2700D5E14C /* NowPlayingViewController.swift */; };
 		2152F07D5A2CF4404DB6760D /* Pods_MovieFyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8796835E17119F0199B530A1 /* Pods_MovieFyTests.framework */; };
 		33BDBA46BFB904202104B8FB /* Pods_MovieFy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF8B544A6571D4CDE062818 /* Pods_MovieFy.framework */; };
 		413FD90E70EC551EFD5192D2 /* Pods_MovieFyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D934202326B0855213D867F /* Pods_MovieFyUITests.framework */; };
@@ -39,7 +39,6 @@
 /* Begin PBXFileReference section */
 		0A236D3B2140B3F800D5E14C /* MovieFy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieFy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A236D3E2140B3F800D5E14C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0A236D402140B3F900D5E14C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0A236D432140B3F900D5E14C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0A236D452140B3FA00D5E14C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A236D482140B3FA00D5E14C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,6 +49,7 @@
 		0A236D5A2140B3FA00D5E14C /* MovieFyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieFyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A236D5E2140B3FA00D5E14C /* MovieFyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieFyUITests.swift; sourceTree = "<group>"; };
 		0A236D602140B3FA00D5E14C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A236D712140BE2700D5E14C /* NowPlayingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewController.swift; sourceTree = "<group>"; };
 		0C8FE48D085DDE46EDE5D7C2 /* Pods-MovieFyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieFyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovieFyTests/Pods-MovieFyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		125C8E6FD0138A131A5A5B01 /* Pods-MovieFyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieFyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovieFyUITests/Pods-MovieFyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4243A0D102C301971C637709 /* Pods-MovieFyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieFyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MovieFyTests/Pods-MovieFyTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,8 +114,8 @@
 		0A236D3D2140B3F800D5E14C /* MovieFy */ = {
 			isa = PBXGroup;
 			children = (
+				0A236D712140BE2700D5E14C /* NowPlayingViewController.swift */,
 				0A236D3E2140B3F800D5E14C /* AppDelegate.swift */,
-				0A236D402140B3F900D5E14C /* ViewController.swift */,
 				0A236D422140B3F900D5E14C /* Main.storyboard */,
 				0A236D452140B3FA00D5E14C /* Assets.xcassets */,
 				0A236D472140B3FA00D5E14C /* LaunchScreen.storyboard */,
@@ -301,15 +301,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-MovieFyUITests-checkManifestLockResult.txt",
 			);
@@ -323,15 +319,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-MovieFy-checkManifestLockResult.txt",
 			);
@@ -345,15 +337,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-MovieFyTests-checkManifestLockResult.txt",
 			);
@@ -367,15 +355,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MovieFy/Pods-MovieFy-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 			);
@@ -391,7 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A236D412140B3F900D5E14C /* ViewController.swift in Sources */,
+				0A236D722140BE2700D5E14C /* NowPlayingViewController.swift in Sources */,
 				0A236D3F2140B3F800D5E14C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
