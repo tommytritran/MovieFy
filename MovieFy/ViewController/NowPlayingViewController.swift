@@ -10,8 +10,8 @@ import UIKit
 import AlamofireImage
 import SVProgressHUD
 class NowPlayingViewController: UIViewController, UITableViewDataSource  {
-
-
+    
+    
     @IBOutlet weak var tableView: UITableView!
     
     var movies: [[String: Any]] = []
@@ -31,7 +31,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource  {
         
     }
     @objc func didPullForRefresh(_ refreshControll: UIRefreshControl){
-            fetchMovies()
+        fetchMovies()
     }
     func alertHandler(){
         let alert = UIAlertController(title:"Network error", message: "could not load movies", preferredStyle:UIAlertControllerStyle.alert)
@@ -60,7 +60,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource  {
         }
         task.resume()
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movies.count
     }
@@ -86,6 +86,15 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource  {
         
         
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! UITableViewCell
+        if let indexPath = tableView.indexPath(for:cell){
+        let movie = movies[indexPath.row]
+        let detailViewController = segue.destination as! DetailViewController
+        detailViewController.movie = movie
+        }
     }
     
     override func didReceiveMemoryWarning() {
