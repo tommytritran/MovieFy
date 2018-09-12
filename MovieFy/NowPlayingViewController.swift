@@ -8,7 +8,7 @@
 
 import UIKit
 import AlamofireImage
-
+import SVProgressHUD
 class NowPlayingViewController: UIViewController, UITableViewDataSource  {
 
 
@@ -24,14 +24,22 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource  {
         
         refreshControl.addTarget(self, action: #selector(NowPlayingViewController.didPullForRefresh(_:)), for: .valueChanged)
         tableView.insertSubview(refreshControl, at:0)
-        
+        SVProgressHUD.show()
         tableView.dataSource = self
         fetchMovies()
+                self.tableView?.rowHeight = 200.0
         
     }
     @objc func didPullForRefresh(_ refreshControll: UIRefreshControl){
             fetchMovies()
     }
+    func alertHandler(){
+        let alert = UIAlertController(title:"Network error", message: "could not load movies", preferredStyle:UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Try again", style: UIAlertActionStyle.default, handler: {(action) in self.fetchMovies()}))
+        
+        self.present(alert, animated: true,completion: nil)
+    }
+    
     func fetchMovies(){
        
         
@@ -40,6 +48,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource  {
         let session = URLSession(configuration:.default, delegate: nil, delegateQueue:OperationQueue.main)
         let task = session.dataTask(with: request){ (data, response, error) in
             if let error = error{
+                self.alertHandler()
                 print(error.localizedDescription)
             }else if let data = data{
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String:Any]
@@ -47,6 +56,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource  {
                 self.movies = movies
                 self.tableView.reloadData()
                 self.refreshControl.endRefreshing()
+                SVProgressHUD.dismiss()
             }
             
         }
