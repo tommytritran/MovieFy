@@ -68,7 +68,7 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="kiE-mz-wcV" secondAttribute="trailing" constant="20" id="roj-A9-f0R"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.79533879923509843" green="1" blue="0.75358175918227721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.035268570633669387" green="0.61605408031088082" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="overviewLabel" destination="kiE-mz-wcV" id="S2X-Kd-B9Q"/>
                                             <outlet property="posterImageview" destination="kS2-aV-G8U" id="WvW-KH-tY4"/>
@@ -117,7 +117,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Movie overview" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SM7-qe-Py8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Movie overview" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SM7-qe-Py8">
                                 <rect key="frame" x="29" y="463" width="365" height="262"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -129,7 +129,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.035268570630000003" green="0.61605408029999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="pAo-v7-pGD"/>
                     </view>
                     <connections>
@@ -215,6 +215,7 @@
                                         </view>
                                         <connections>
                                             <outlet property="posterImageView" destination="TF7-zm-Fpj" id="gbp-CI-MAH"/>
+                                            <segue destination="abG-Vk-ROU" kind="show" id="J1K-8Q-ckh"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -256,4 +257,7 @@
         <image name="now_playing_tabbar_item" width="21" height="21"/>
         <image name="superhero_tabbar_item" width="21" height="23"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="6jF-gU-ycu"/>
+    </inferredMetricsTieBreakers>
 </document>
