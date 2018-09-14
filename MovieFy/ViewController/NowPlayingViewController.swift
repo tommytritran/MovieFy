@@ -55,6 +55,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource  {
                 self.tableView.reloadData()
                 self.refreshControl.endRefreshing()
                 SVProgressHUD.dismiss()
+                print(movies)
             }
             
         }
