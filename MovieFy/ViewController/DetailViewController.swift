@@ -30,6 +30,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var overviewLabel: UITextView!
     
     
+    
     var movie: [String:Any]?
     override func viewDidLoad() {
         super.viewDidLoad()

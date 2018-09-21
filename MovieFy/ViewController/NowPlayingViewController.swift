@@ -24,10 +24,11 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource  {
         
         refreshControl.addTarget(self, action: #selector(NowPlayingViewController.didPullForRefresh(_:)), for: .valueChanged)
         tableView.insertSubview(refreshControl, at:0)
+        tableView.rowHeight = UITableViewAutomaticDimension
         SVProgressHUD.show()
         tableView.dataSource = self
         fetchMovies()
-        self.tableView?.rowHeight = 200.0
+
         
     }
     @objc func didPullForRefresh(_ refreshControll: UIRefreshControl){
