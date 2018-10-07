@@ -12,7 +12,7 @@ class superheroViewController: UIViewController, UICollectionViewDataSource {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var movies: [[String:Any]] = []
+    var movies: [Movie] = []
     var refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
@@ -49,7 +49,7 @@ class superheroViewController: UIViewController, UICollectionViewDataSource {
             }else if let data = data{
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String:Any]
                 let movies = dataDictionary["results"] as! [[String: Any]]
-                self.movies = movies
+                self.movies = Movie.movies(dictionaries: movies)
                 self.collectionView.reloadData()
                 self.refreshControl.endRefreshing()
             }
@@ -78,10 +78,8 @@ class superheroViewController: UIViewController, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PosterCell", for: indexPath) as! PosterCell
         let movie = movies[indexPath.item]
-        if let posterPathString = movie["poster_path"] as? String{
-            let baseURL = "https://image.tmdb.org/t/p/w500"
-            let posterURL = URL(string: baseURL + posterPathString)!
-            cell.posterImageView.af_setImage(withURL: posterURL)
+        if movie.posterUrl != nil {
+            cell.posterImageView.af_setImage(withURL: movie.posterUrl!)
         }
         return cell
     }

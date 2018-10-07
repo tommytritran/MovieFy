@@ -66,9 +66,9 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.035268570633669387" green="0.61605408031088082" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <outlet property="overviewLabel" destination="kiE-mz-wcV" id="S2X-Kd-B9Q"/>
-                                            <outlet property="posterImageview" destination="kS2-aV-G8U" id="WvW-KH-tY4"/>
-                                            <outlet property="titleLabel" destination="LtK-BY-AUK" id="bPf-yg-dKi"/>
+                                            <outlet property="overviewLabel" destination="kiE-mz-wcV" id="1k7-az-GMG"/>
+                                            <outlet property="posterImageview" destination="kS2-aV-G8U" id="JJY-fN-SqN"/>
+                                            <outlet property="titleLabel" destination="LtK-BY-AUK" id="3IS-Ah-e6O"/>
                                             <segue destination="abG-Vk-ROU" kind="show" id="6jF-gU-ycu"/>
                                         </connections>
                                     </tableViewCell>
@@ -130,7 +130,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yNg-LK-5d5">
                                 <rect key="frame" x="8" y="404.33333333333326" width="398" height="274.66666666666674"/>
                                 <color key="backgroundColor" red="0.035268570630000003" green="0.61605408029999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>

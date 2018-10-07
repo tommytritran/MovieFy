@@ -31,22 +31,21 @@ class DetailViewController: UIViewController {
     
     
     
-    var movie: [String:Any]?
+    var movie: Movie?
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let movie = movie{
-            titleLabel.text = movie[movieKeys.title] as? String
-            releaseDateLabel.text = movie[movieKeys.releaseDate] as? String
-            overviewLabel.text = movie[movieKeys.overview ] as? String
+            titleLabel.text = movie.title
+            releaseDateLabel.text = movie.releaseDate
+            overviewLabel.text = movie.overview
             
-            let backDropPathString = movie[movieKeys.backDropPath] as! String
-            let posterPathString = movie[movieKeys.posterPath ] as! String
-            let baseUrlString = "https://image.tmdb.org/t/p/w500"
-            let backDropUrl = URL(string: baseUrlString + backDropPathString)!
-            backDropImageView.af_setImage(withURL: backDropUrl)
-            let posterUrl = URL(string: baseUrlString + posterPathString)!
-            posterImageView.af_setImage(withURL: posterUrl)
+            if movie.posterUrl != nil {
+                posterImageView.af_setImage(withURL: movie.posterUrl!)
+            }
+            if movie.backDropUrl != nil {
+                backDropImageView.af_setImage(withURL: movie.backDropUrl!)
+            }
         }
     }
 
