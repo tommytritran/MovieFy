@@ -262,11 +262,11 @@
             </objects>
             <point key="canvasLocation" x="943.47826086956525" y="835.59782608695662"/>
         </scene>
-        <!--Superhero-->
+        <!--Popular-->
         <scene sceneID="gOB-Af-JlL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Ij-St-bZ8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Superhero" image="superhero_tabbar_item" id="fTh-e0-1qq"/>
+                    <tabBarItem key="tabBarItem" title="Popular" image="reel_tabbar_icon" id="fTh-e0-1qq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hdk-6P-DgX">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
@@ -284,9 +284,9 @@
     </scenes>
     <resources>
         <image name="now_playing_tabbar_item" width="21" height="21"/>
-        <image name="superhero_tabbar_item" width="21" height="23"/>
+        <image name="reel_tabbar_icon" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6jF-gU-ycu"/>
+        <segue reference="J1K-8Q-ckh"/>
     </inferredMetricsTieBreakers>
 </document>

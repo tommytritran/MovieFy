@@ -41,8 +41,9 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource  {
         self.present(alert, animated: true,completion: nil)
     }
     
+ 
     func fetchMovies(){
-        MovieApiManager().nowPlayingMovies { (movies: [Movie]?, error: Error?) in
+        MovieApiManager().fetchMovies(genre: "now_playing") { (movies: [Movie]?, error: Error?) in
             if let movies = movies {
                 self.movies = movies
                 self.tableView.reloadData()
